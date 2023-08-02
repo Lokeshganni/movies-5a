@@ -97,9 +97,8 @@ app.put("/movies/:movieId", async (req, res) => {
 
 //API 5
 
-app.delete("movies/:movieId/", async (req, res) => {
+app.delete("/movies/:movieId/", async (req, res) => {
   const { movieId } = req.params;
-  console.log(movieId);
   const api5Query = `
   DELETE FROM movie WHERE movie_id=${movieId};`;
   await db.run(api5Query);
@@ -124,7 +123,7 @@ app.get("/directors/", async (req, res) => {
 
 //API 7
 
-app.get("directors/:directorId/movies/", async (req, res) => {
+app.get("/directors/:directorId/movies/", async (req, res) => {
   const { directorId } = req.params;
   const api7Query = `
   SELECT movie_name 
