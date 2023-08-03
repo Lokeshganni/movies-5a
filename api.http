@@ -5,6 +5,7 @@ GET http://localhost:3000/movies/
 ###
 
 POST http://localhost:3000/movies/
+Content-Type: application/json
 
 {
   "directorId": 6,
@@ -19,6 +20,7 @@ GET http://localhost:3000/movies/47/
 ###
 
 PUT http://localhost:3000/movies/47/
+Content-Type: application/json
 
 {
   "directorId": 24,
